@@ -1,0 +1,63 @@
+console.log(
+  [
+    "Badlands",
+    "Bamboo Jungle",
+    "Beach",
+    "Birch Forest",
+    "Cold Ocean",
+    "Dark Forest",
+    "Deep Cold Ocean",
+    "Deep Dark",
+    "Deep Frozen Ocean",
+    "Deep Lukewarm Ocean",
+    "Deep Ocean",
+    "Desert",
+    "Dripstone Caves",
+    "Eroded Badlands",
+    "Flower Forest",
+    "Forest",
+    "Frozen Ocean",
+    "Frozen River",
+    "Frozen Peaks",
+    "Grove",
+    "Ice Spikes",
+    "Jagged Peaks",
+    "Jungle",
+    "Lukewarm Ocean",
+    "Lush Caves",
+    "Mangrove Swamp",
+    "Meadow",
+    "Mushroom Fields",
+    "Ocean",
+    "Old Growth Birch Forest",
+    "Old Growth Pine Taiga",
+    "Old Growth Spruce Taiga",
+    "Plains",
+    "River",
+    "Savanna",
+    "Savanna Plateau",
+    "Snowy Beach",
+    "Snowy Taiga",
+    "Snowy Plains",
+    "Snowy Slopes",
+    "Sparse Jungle",
+    "Stony Shore",
+    "Stony Peaks",
+    "Sunflower Plains",
+    "Swamp",
+    "Taiga",
+    "Warm Ocean",
+    "Windswept Forest",
+    "Windswept Gravelly Hills",
+    "Windswept Hills",
+    "Windswept Savanna",
+    "Wooded Badlands",
+  ]
+    .map((b) => b.replaceAll(" ", "_").toLowerCase())
+    .filter(
+      (b) =>
+        !Object.keys(require("./visitedBiomes.json"))
+          .map((b) => b.split(":").pop())
+          .includes(b)
+    )
+);
